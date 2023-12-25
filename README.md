@@ -1,2 +1,2 @@
 # OOP_UAS
-Project UAS dari Matkul OOP
+Tolong kalo udah commit, chat di grup biar gw review pull request & merge *abil
