@@ -9,61 +9,64 @@ package com.itenas.oop.org.uashotel.pojo;
  * @author Nicholas
  */
 public class Guest {
-    private String id;
-    private String nama;
-    private String gender;
-    private int pNumber;
-    private int umur;
-    private Account akun;
+    private String idGuest;
+    private String namaGuest;
+    private String genderGuest;
+    private int pNumberGuest;
+    private int umurGuest;
+    private Account akunGuest;
 
     public Guest() {
+        
     }
 
-    public String getId() {
-        return id;
+    public String getIdGuest() {
+        return idGuest;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setIdGuest(String idGuest) {
+        this.idGuest = idGuest;
     }
 
-    public String getNama() {
-        return nama;
+    public String getNamaGuest() {
+        return namaGuest;
     }
 
-    public void setNama(String nama) {
-        this.nama = nama;
+    public void setNamaGuest(String namaGuest) {
+        this.namaGuest = namaGuest;
     }
 
-    public String getGender() {
-        return gender;
+    public String getGenderGuest() {
+        return genderGuest;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setGenderGuest(String genderGuest) {
+        this.genderGuest = genderGuest;
     }
 
-    public int getpNumber() {
-        return pNumber;
+    public int getpNumberGuest() {
+        return pNumberGuest;
     }
 
-    public void setpNumber(int pNumber) {
-        this.pNumber = pNumber;
+    public void setpNumberGuest(int pNumberGuest) {
+        this.pNumberGuest = pNumberGuest;
     }
 
-    public int getUmur() {
-        return umur;
+    public int getUmurGuest() {
+        return umurGuest;
     }
 
-    public void setUmur(int umur) {
-        this.umur = umur;
+    public void setUmurGuest(int umurGuest) {
+        this.umurGuest = umurGuest;
     }
 
-    public Account getAkun() {
-        return akun;
+    public Account getAkunGuest() {
+        return akunGuest;
     }
 
-    public void setAkun(Account akun) {
-        this.akun = akun;
+    public void setAkunGuest(Account akunGuest) {
+        this.akunGuest = akunGuest;
     }
 }
+
+    
