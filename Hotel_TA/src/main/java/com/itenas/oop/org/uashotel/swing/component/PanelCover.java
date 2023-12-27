@@ -35,7 +35,7 @@ public class PanelCover extends javax.swing.JPanel {
     public PanelCover() {
         initComponents();
         setOpaque(false);
-        layout = new MigLayout("wrap, fill", "[center]", "push[]25[]10[]25[]push");
+        layout = new MigLayout("wrap, fill", "[center]", "push[]10[]5[]25[]push");
         setLayout(layout);
         init();
     }
@@ -45,16 +45,16 @@ public class PanelCover extends javax.swing.JPanel {
         judul.setFont(new Font("sansserif", 1, 30));
         judul.setForeground(new Color(245,245,245));
         add(judul);
-        deskripsi = new JLabel("Untuk terhubung dengan kami");
+        deskripsi = new JLabel("Daftarkan dirimu");
         deskripsi.setForeground(new Color(245, 245, 245));
         add(deskripsi);
-        deskripsi1 = new JLabel("login dengan akunmu!");
+        deskripsi1 = new JLabel("dan pesan kamar sekarang!");
         deskripsi1.setForeground(new Color(245, 245, 245));
         add(deskripsi1);
         button = new ButtonOutLine();
         button.setBackground(new Color(255, 255, 255));
         button.setForeground(new Color(255, 255, 255));
-        button.setText("SIGN IN");
+        button.setText("SIGN UP");
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
@@ -135,15 +135,15 @@ public class PanelCover extends javax.swing.JPanel {
     private void login(Boolean l) {
        if (this.isLogin != l) {
             if (l) {
-                judul.setText("Halo, Kitsune!");
-                deskripsi.setText("Daftarkan dirimu");
-                deskripsi1.setText("dan pesan kamar sekarang!");
-                button.setText("SIGN UP");
-            } else {
                 judul.setText("Selamat Datang!");
                 deskripsi.setText("Untuk terhubung dengan kami");
                 deskripsi1.setText("login dengan akunmu!");
                 button.setText("SIGN IN");
+            } else {
+                judul.setText("Selamat Datang!");
+                deskripsi.setText("Daftarkan dirimu");
+                deskripsi1.setText("dan pesan kamar sekarang!");
+                button.setText("SIGN UP");
             }
             this.isLogin = l ;
         }
