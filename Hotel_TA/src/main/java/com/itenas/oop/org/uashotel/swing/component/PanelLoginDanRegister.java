@@ -22,8 +22,8 @@ public class PanelLoginDanRegister extends javax.swing.JLayeredPane {
         initComponents();
         initRegister();
         initLogin();
-     login.setVisible(false);
-       register.setVisible(true);
+        login.setVisible(true);
+        register.setVisible(false);
     }
     
     private void initRegister() {
@@ -92,11 +92,11 @@ public class PanelLoginDanRegister extends javax.swing.JLayeredPane {
     
         public void showRegister (boolean show) {
             if (show) {
-                register.setVisible(true);
-                login.setVisible(false);
-            } else {
                 register.setVisible(false);
                 login.setVisible(true);
+            } else {
+                register.setVisible(true);
+                login.setVisible(false);
             }
             
         }

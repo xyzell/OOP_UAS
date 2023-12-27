@@ -114,7 +114,6 @@ public class loginForm extends javax.swing.JFrame {
         BG = new javax.swing.JLayeredPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
 
         BG.setBackground(new java.awt.Color(255, 255, 255));
         BG.setOpaque(true);
