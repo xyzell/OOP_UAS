@@ -27,7 +27,7 @@ public class PanelLoginDanRegister extends javax.swing.JLayeredPane {
     }
     
     private void initRegister() {
-        register.setLayout(new MigLayout ("wrap", "push[center]push", "push[]25[]10[]10[]push"));
+        register.setLayout(new MigLayout ("wrap", "push[center]push", "110[]25[]10[]10[]30[]push"));
         JLabel label = new JLabel("Buat Akun");
         label.setFont(new Font("sansserif", 1, 30));
         label.setForeground(new Color(48, 45, 35));
@@ -60,7 +60,7 @@ public class PanelLoginDanRegister extends javax.swing.JLayeredPane {
     } 
    
     private void initLogin() {
-        login.setLayout(new MigLayout("wrap ", "push[center]push", "push[]25[]10[]10[]25[]push"));
+        login.setLayout(new MigLayout("wrap ", "push[center]push", "push[]25[]10[]10[]15[]push"));
         JLabel label = new JLabel("Masuk");
         label.setFont(new Font("sansserif", 1, 30));
         label.setForeground(new Color(48, 45, 35));
