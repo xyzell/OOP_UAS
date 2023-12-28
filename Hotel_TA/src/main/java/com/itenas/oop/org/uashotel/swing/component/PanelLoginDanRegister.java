@@ -7,6 +7,7 @@ package com.itenas.oop.org.uashotel.swing.component;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
+import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -18,15 +19,15 @@ import net.miginfocom.swing.MigLayout;
  */
 public class PanelLoginDanRegister extends javax.swing.JLayeredPane {
 
-    public PanelLoginDanRegister() {
+    public PanelLoginDanRegister(ActionListener eventRegister) {
         initComponents();
-        initRegister();
+        initRegister(eventRegister);
         initLogin();
         login.setVisible(true);
         register.setVisible(false);
     }
     
-    private void initRegister() {
+    private void initRegister(ActionListener eventRegister) {
         register.setLayout(new MigLayout ("wrap", "push[center]push", "110[]25[]10[]10[]30[]push"));
         JLabel label = new JLabel("Buat Akun");
         label.setFont(new Font("sansserif", 1, 30));
@@ -51,6 +52,7 @@ public class PanelLoginDanRegister extends javax.swing.JLayeredPane {
         Button cmd = new Button();
         cmd.setBackground(new Color (48, 45, 35));
         cmd.setForeground(new Color (250, 250, 250));
+        cmd.addActionListener(eventRegister);
         cmd.setText("Daftar");
         register.add(cmd, "w 40%, h 40");
         
