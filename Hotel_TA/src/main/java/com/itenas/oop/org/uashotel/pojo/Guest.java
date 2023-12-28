@@ -16,7 +16,6 @@ public class Guest {
     private String guest_pnumber;
     private int guest_age;
 
-    // Constructor
     public Guest(int ID_Guests, int ID_Acc, String guest_name, String guest_gender, String guest_pnumber, int guest_age) {
         this.ID_Guests = ID_Guests;
         this.ID_Acc = ID_Acc;
@@ -26,7 +25,6 @@ public class Guest {
         this.guest_age = guest_age;
     }
 
-    // Getters and Setters
     public int getID_Guests() {
         return ID_Guests;
     }
