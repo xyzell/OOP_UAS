@@ -32,26 +32,15 @@ public class ExitButton extends JButton{
     setBorder(BorderFactory.createEmptyBorder());
     setContentAreaFilled(false);
     setCursor(new Cursor(Cursor.HAND_CURSOR));
-    Check(0);
-    }
-  
-  public void Check (int checker){
     exit = new ExitConfirmation();
       addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent me) {
-                if(checker != 1){
-                    
                 exit.setVisible(true);
                 exit.setLocationRelativeTo(null);
-                } else {
-                    exit.toFront();
-                }
-                
-                
             }
                 
         });
-  }
+    }
 }
 
