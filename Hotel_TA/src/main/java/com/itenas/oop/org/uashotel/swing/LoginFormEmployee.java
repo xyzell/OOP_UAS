@@ -53,7 +53,6 @@ public class LoginFormEmployee extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         disable = new javax.swing.JLabel();
         show = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(199, 226, 255));
@@ -210,17 +209,6 @@ public class LoginFormEmployee extends javax.swing.JFrame {
         });
         jPanel2.add(show, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, 34, 31));
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(173, 151, 79));
-        jButton2.setText("Sign Up");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, -1, -1));
-
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 0, 350, 380));
 
         setSize(new java.awt.Dimension(718, 380));
@@ -289,13 +277,10 @@ public class LoginFormEmployee extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_formWindowOpened
-
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        SignUp SignUpFrame = new SignUp();
-        SignUpFrame.setVisible(true);
-        SignUpFrame.setlocationRelativeTo(null);
-        this.dispose();
+    
+    private void btnLoginMouseClicked(java.awt.event.MouseEvent evt) {
+        
+        
     }
 
     /**
@@ -327,6 +312,7 @@ public class LoginFormEmployee extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new LoginFormEmployee().setVisible(true);
             }
