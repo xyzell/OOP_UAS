@@ -51,9 +51,9 @@ public class LoginFormEmployee extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
         disable = new javax.swing.JLabel();
         show = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(199, 226, 255));
@@ -70,8 +70,6 @@ public class LoginFormEmployee extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Documents\\LATIHAN JAVA\\PROJECT UAS\\Image\\user.png")); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 85, -1, -1));
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
@@ -137,7 +135,6 @@ public class LoginFormEmployee extends javax.swing.JFrame {
         jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 272, 37));
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Documents\\LATIHAN JAVA\\PROJECT UAS\\icon\\icons8_user_20px_1.png")); // NOI18N
         jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 34, 31));
 
         jCheckBox1.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
@@ -195,15 +192,7 @@ public class LoginFormEmployee extends javax.swing.JFrame {
         jLabel14.setText("Don't have an account?");
         jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 183, -1));
 
-        jLabel15.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setText("Sign Up");
-        jLabel15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 129, -1));
-
         disable.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        disable.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Documents\\LATIHAN JAVA\\PROJECT UAS\\icon\\icons8_invisible_20px_1.png")); // NOI18N
         disable.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         disable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -213,7 +202,6 @@ public class LoginFormEmployee extends javax.swing.JFrame {
         jPanel2.add(disable, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, 34, 31));
 
         show.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        show.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Documents\\LATIHAN JAVA\\PROJECT UAS\\icon\\icons8_eye_20px_1.png")); // NOI18N
         show.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         show.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -221,6 +209,17 @@ public class LoginFormEmployee extends javax.swing.JFrame {
             }
         });
         jPanel2.add(show, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, 34, 31));
+
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(173, 151, 79));
+        jButton2.setText("Sign Up");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, -1, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 0, 350, 380));
 
@@ -291,22 +290,13 @@ public class LoginFormEmployee extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_formWindowOpened
 
-    private void btnLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoginMouseClicked
-//        String username, password;
-//        username = txt_Username.getText();
-//        password = String.valueOf(txt_Password.getPassword());
-//        
-//        receptionist = receptionistService.login(username, password);
-//        
-//        if(receptionist != null){
-//            login = true;
-//            receptionist.setLoginStatus(true);
-//            JOptionPane.showMessageDialog(null, "Berhasil Login!");
-//            this.dispose();
-//        }else{
-//            JOptionPane.showMessageDialog(null, "Username and password salah");
-//        }
-    }//GEN-LAST:event_btnLoginMouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        SignUp SignUpFrame = new SignUp();
+        SignUpFrame.setVisible(true);
+        SignUpFrame.setlocationRelativeTo(null);
+        this.dispose();
+    }
 
     /**
      * @param args the command line arguments
@@ -353,7 +343,6 @@ public class LoginFormEmployee extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -367,4 +356,8 @@ public class LoginFormEmployee extends javax.swing.JFrame {
     private javax.swing.JPasswordField txt_Password;
     private javax.swing.JTextField txt_Username;
     // End of variables declaration//GEN-END:variables
+
+    void setlocationRelativeTo(Object object) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
