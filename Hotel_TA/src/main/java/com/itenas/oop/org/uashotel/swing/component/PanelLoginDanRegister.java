@@ -16,6 +16,7 @@ import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 import net.miginfocom.swing.MigLayout;
 
 /**
@@ -79,10 +80,12 @@ public class PanelLoginDanRegister extends javax.swing.JLayeredPane {
         txtEmail.setPrefixIcon(new ImageIcon(getClass().getResource("/images/mail.png")));
         txtEmail.setHint(("Email"));
         login.add(txtEmail, "w 60%");
+        
         MyPassField txtPass = new MyPassField();
         txtPass.setPrefixIcon(new ImageIcon(getClass().getResource("/images/pass.png")));
         txtPass.setHint(("Sandi"));
         login.add(txtPass, "w 60%");
+        
         JButton cmdLupa = new JButton("Lupa Kata Sandi?");
         cmdLupa.setForeground(new Color(100,100,100));
         cmdLupa.setFont(new Font("sansserif", 1, 12));
@@ -97,14 +100,23 @@ public class PanelLoginDanRegister extends javax.swing.JLayeredPane {
         cmd.setText("Login");
         login.add(cmd, "w 40%, h 40");
         
+        cmd.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                login(txtEmail, txtPass);
+            }
+        });
         
         ShowPasswordCheckBox loginPassShow = new ShowPasswordCheckBox();
         login.add(loginPassShow, "pos 405 255 n n");
         showPassword(loginPassShow, txtPass);
-        
-        
-        
-        
+    }
+    
+    public void login(JTextField txtEmail, JPasswordField txtPass){
+        String email = txtEmail.getText();
+        String pass = String.valueOf(txtPass.getPassword());
+        System.out.println(email);
+        System.out.println(pass);
     }
     
     public void showPassword(JCheckBox show, JPasswordField pass){
