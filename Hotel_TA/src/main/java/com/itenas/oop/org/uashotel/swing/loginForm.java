@@ -5,16 +5,10 @@ import com.itenas.oop.org.uashotel.swing.component.PanelCover;
 import com.itenas.oop.org.uashotel.swing.component.PanelLoading;
 import com.itenas.oop.org.uashotel.swing.component.PanelLoginDanRegister;
 import com.itenas.oop.org.uashotel.swing.component.ExitButton;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
-import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JPanel;
 import net.miginfocom.swing.MigLayout;
 import org.jdesktop.animation.timing.Animator;
 import org.jdesktop.animation.timing.TimingTarget;
@@ -23,7 +17,7 @@ import org.jdesktop.animation.timing.TimingTargetAdapter;
 
 
 
-public class loginForm extends javax.swing.JFrame {
+public class LoginForm extends javax.swing.JFrame {
     
     private MigLayout layout;
     private PanelCover cover;
@@ -35,7 +29,7 @@ public class loginForm extends javax.swing.JFrame {
     private final double loginSize = 60;
     private final DecimalFormat df = new DecimalFormat ("##0.###");
     
-    public loginForm() {
+    public LoginForm() {
         initComponents();
         init();
     }
@@ -48,7 +42,6 @@ public class loginForm extends javax.swing.JFrame {
         cover = new PanelCover();
         loading = new PanelLoading();
         
-
         ActionListener eventRegister = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -114,11 +107,7 @@ public class loginForm extends javax.swing.JFrame {
         BG.add(exitButton,"pos 780 10 15% 10%");
         BG.add(loading, "pos 0 0 100% 100%");
         BG.add(cover, "width " +coverSize+ "%, pos 0al 0 n 100%");
-        BG.add(loginDanRegister, "width " +loginSize+ "%, pos 1al 0 n 100%");
-        
-        
-        
-        
+        BG.add(loginDanRegister, "width " +loginSize+ "%, pos 1al 0 n 100%");        
        
         cover.addEvent(new ActionListener() {
             @Override
@@ -130,6 +119,7 @@ public class loginForm extends javax.swing.JFrame {
         });
        
     }
+  
         private void register() {
             loading.setVisible(true);
             System.out.println("Click Register");
@@ -197,14 +187,18 @@ public class loginForm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(loginForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(loginForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(loginForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(loginForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -213,7 +207,7 @@ public class loginForm extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new loginForm().setVisible(true);
+                new LoginForm().setVisible(true);
             }
         });
     }
