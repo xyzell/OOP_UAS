@@ -4,43 +4,34 @@
  */
 package com.itenas.oop.org.uashotel.service.impl;
 
+// GuestServiceImpl.java
+
 import com.itenas.oop.org.uashotel.pojo.Guest;
 import com.itenas.oop.org.uashotel.service.GuestService;
 import java.util.HashMap;
 import java.util.Map;
 
 public class GuestServiceImpl implements GuestService {
-    private Map<Integer, Guest> guestMap;
-    private Map<Integer, String> roomMap;
+    private final Map<Integer, Guest> guests;
 
     public GuestServiceImpl() {
-        this.guestMap = new HashMap<>();
-        this.roomMap = new HashMap<>();
+        this.guests = new HashMap<>();
     }
 
     @Override
-    public Guest read(int guestID) {
-        return guestMap.get(guestID);
+    public void createGuest(Guest guest) {
+        guests.put(guest.getID_Guests(), guest);
     }
 
     @Override
-    public void update(Guest guest) {
-        if (guestMap.containsKey(guest.getID_Guests())) {
-            guestMap.put(guest.getID_Guests(), guest);
-            System.out.println("Guest information updated successfully.");
-        } else {
-            System.out.println("Guest not found. Update failed.");
-        }
+    public Guest readGuest(int guestId) {
+        return guests.get(guestId);
     }
 
     @Override
-    public String findRoom(int guestID) {
-        return roomMap.getOrDefault(guestID, "Room not found");
-    }
-
-    @Override
-    public void bookRoom(int guestID, String roomType) {
-        roomMap.put(guestID, roomType);
-        System.out.println("Room booked successfully.");
+    public void updateGuest(Guest guest) {
+        guests.put(guest.getID_Guests(), guest);
     }
 }
+
+

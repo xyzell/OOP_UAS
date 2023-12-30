@@ -10,10 +10,13 @@ import com.itenas.oop.org.uashotel.pojo.Guest;
  *
  * @author Nicholas
  */
+// GuestService.java
+
+import com.itenas.oop.org.uashotel.pojo.Guest;
+
 public interface GuestService {
-    Guest read(int guestID);
-    void update(Guest guest);
-    String findRoom(int guestID);
-    void bookRoom(int guestID, String roomType);
+    void createGuest(Guest guest);
+    Guest readGuest(int guestId);
+    void updateGuest(Guest guest);
 }
 
