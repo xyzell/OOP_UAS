@@ -7,10 +7,15 @@ package com.itenas.oop.org.uashotel.swing.component;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JLabel;
+import javax.swing.JPasswordField;
 import net.miginfocom.swing.MigLayout;
 
 /**
@@ -43,7 +48,7 @@ public class PanelLoginDanRegister extends javax.swing.JLayeredPane {
         txtEmail.setPrefixIcon(new ImageIcon(getClass().getResource("/images/mail.png")));
         txtEmail.setHint(("Email"));
         register.add(txtEmail, "w 60%");
-        MyTextField txtPass = new MyTextField();
+        MyPassField txtPass = new MyPassField();
         txtPass.setPrefixIcon(new ImageIcon(getClass().getResource("/images/pass.png")));
         txtPass.setHint(("Sandi"));
         register.add(txtPass, "w 60%");
@@ -56,8 +61,9 @@ public class PanelLoginDanRegister extends javax.swing.JLayeredPane {
         cmd.setText("Daftar");
         register.add(cmd, "w 40%, h 40");
         
-        
-        
+        ShowPasswordCheckBox registerPassShow = new ShowPasswordCheckBox();
+        register.add(registerPassShow, "pos 405 277 n n");
+        showPassword(registerPassShow, txtPass);
         
     } 
    
@@ -73,7 +79,7 @@ public class PanelLoginDanRegister extends javax.swing.JLayeredPane {
         txtEmail.setPrefixIcon(new ImageIcon(getClass().getResource("/images/mail.png")));
         txtEmail.setHint(("Email"));
         login.add(txtEmail, "w 60%");
-        MyTextField txtPass = new MyTextField();
+        MyPassField txtPass = new MyPassField();
         txtPass.setPrefixIcon(new ImageIcon(getClass().getResource("/images/pass.png")));
         txtPass.setHint(("Sandi"));
         login.add(txtPass, "w 60%");
@@ -90,8 +96,30 @@ public class PanelLoginDanRegister extends javax.swing.JLayeredPane {
         cmd.setForeground(new Color (250, 250, 250));
         cmd.setText("Login");
         login.add(cmd, "w 40%, h 40");
+        
+        
+        ShowPasswordCheckBox loginPassShow = new ShowPasswordCheckBox();
+        login.add(loginPassShow, "pos 405 255 n n");
+        showPassword(loginPassShow, txtPass);
+        
+        
+        
+        
     }
     
+    public void showPassword(JCheckBox show, JPasswordField pass){
+        show.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                if (show.isSelected()) {
+                    pass.setEchoChar((char)0);
+                } else {
+                    pass.setEchoChar('*');
+                }
+            }
+        });
+    }
+        
         public void showRegister (boolean show) {
             if (show) {
                 register.setVisible(false);
