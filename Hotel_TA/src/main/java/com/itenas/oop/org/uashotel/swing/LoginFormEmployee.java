@@ -211,7 +211,7 @@ public class LoginFormEmployee extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 0, 350, 380));
 
-        setSize(new java.awt.Dimension(718, 380));
+        setSize(new java.awt.Dimension(718, 377));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

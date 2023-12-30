@@ -134,6 +134,8 @@ public class loginForm extends javax.swing.JFrame {
             loading.setVisible(true);
             System.out.println("Click Register");
         }
+        
+        
 
     /**
      * This method is called from within the constructor to initialize the form.

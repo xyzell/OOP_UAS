@@ -4,6 +4,7 @@
  */
 package com.itenas.oop.org.uashotel.swing.component;
 
+import com.itenas.oop.org.uashotel.pojo.Account;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
@@ -19,10 +20,16 @@ import net.miginfocom.swing.MigLayout;
  */
 public class PanelLoginDanRegister extends javax.swing.JLayeredPane {
 
-    public PanelLoginDanRegister(ActionListener eventRegister) {
+    private Account akun;
+    
+    public Account getAccount() {
+        return akun;
+    }
+    
+    public PanelLoginDanRegister(ActionListener eventRegister ActionListener eventLogin) {
         initComponents();
         initRegister(eventRegister);
-        initLogin();
+        initLogin(eventLogin);
         login.setVisible(true);
         register.setVisible(false);
     }
@@ -61,7 +68,7 @@ public class PanelLoginDanRegister extends javax.swing.JLayeredPane {
         
     } 
    
-    private void initLogin() {
+    private void initLogin(ActionListener eventLogin) {
         login.setLayout(new MigLayout("wrap ", "push[center]push", "push[]25[]10[]10[]15[]push"));
         JLabel label = new JLabel("Masuk");
         label.setFont(new Font("sansserif", 1, 30));
@@ -90,6 +97,10 @@ public class PanelLoginDanRegister extends javax.swing.JLayeredPane {
         cmd.setForeground(new Color (250, 250, 250));
         cmd.setText("Login");
         login.add(cmd, "w 40%, h 40");
+        
+        
+        
+        
     }
     
         public void showRegister (boolean show) {

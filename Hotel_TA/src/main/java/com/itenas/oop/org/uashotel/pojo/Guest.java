@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.itenas.oop.org.uashotel.pojo;
 
 /**
@@ -9,36 +6,23 @@ package com.itenas.oop.org.uashotel.pojo;
  * @author Nicholas
  */
 public class Guest {
-    private int ID_Guests;
-    private int ID_Acc; // Foreign Key
+    private String ID_Guest;
     private String guest_name;
     private String guest_gender;
     private String guest_pnumber;
     private int guest_age;
+    private boolean loginStatus;
+    private Account account;
 
-    public Guest(int ID_Guests, int ID_Acc, String guest_name, String guest_gender, String guest_pnumber, int guest_age) {
-        this.ID_Guests = ID_Guests;
-        this.ID_Acc = ID_Acc;
-        this.guest_name = guest_name;
-        this.guest_gender = guest_gender;
-        this.guest_pnumber = guest_pnumber;
-        this.guest_age = guest_age;
+    public Guest() {
     }
 
-    public int getID_Guests() {
-        return ID_Guests;
+    public String getID_Guest() {
+        return ID_Guest;
     }
 
-    public void setID_Guests(int ID_Guests) {
-        this.ID_Guests = ID_Guests;
-    }
-
-    public int getID_Acc() {
-        return ID_Acc;
-    }
-
-    public void setID_Acc(int ID_Acc) {
-        this.ID_Acc = ID_Acc;
+    public void setID_Guest(String ID_Guest) {
+        this.ID_Guest = ID_Guest;
     }
 
     public String getGuest_name() {
@@ -73,13 +57,23 @@ public class Guest {
         this.guest_age = guest_age;
     }
 
-    public Object getEmail() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public boolean isLoginStatus() {
+        return loginStatus;
     }
 
-    public void setPassword(String newPassword) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void setLoginStatus(boolean loginStatus) {
+        this.loginStatus = loginStatus;
     }
+
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
+    }
+
+    
 }
 
     
