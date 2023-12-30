@@ -15,7 +15,7 @@ import java.util.logging.Logger;
  * @author apple
  */
 public class ConnectionManager {
-    private String DB_URL = "jdbc:mysql://localhost:3306/";
+    private String DB_URL = "jdbc:mysql://localhost:3306/hotel";
     private String username;
     private String password;
     private Connection connection;
