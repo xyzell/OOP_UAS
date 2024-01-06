@@ -2,13 +2,13 @@
 package com.itenas.oop.org.uashotel.swing;
 
 import com.itenas.oop.org.uashotel.swing.component.PanelCover;
-import com.itenas.oop.org.uashotel.swing.component.PanelLoading;
 import com.itenas.oop.org.uashotel.swing.component.PanelLoginDanRegister;
 import com.itenas.oop.org.uashotel.swing.component.ExitButton;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import net.miginfocom.swing.MigLayout;
 import org.jdesktop.animation.timing.Animator;
 import org.jdesktop.animation.timing.TimingTarget;
@@ -21,7 +21,6 @@ public class LoginForm extends javax.swing.JFrame {
     
     private MigLayout layout;
     private PanelCover cover;
-    private PanelLoading loading;
     private boolean isLogin;
     private PanelLoginDanRegister loginDanRegister;
     private final double addSize = 30;
@@ -40,7 +39,7 @@ public class LoginForm extends javax.swing.JFrame {
         
         layout = new MigLayout("fill, insets 0");
         cover = new PanelCover();
-        loading = new PanelLoading();
+        
         
         ActionListener eventRegister = new ActionListener() {
             @Override
@@ -105,9 +104,8 @@ public class LoginForm extends javax.swing.JFrame {
         animator.setResolution(0); // buat animasi smoothnya
         BG.setLayout(layout);
         BG.add(exitButton,"pos 780 10 15% 10%");
-        BG.add(loading, "pos 0 0 100% 100%");
         BG.add(cover, "width " +coverSize+ "%, pos 0al 0 n 100%");
-        BG.add(loginDanRegister, "width " +loginSize+ "%, pos 1al 0 n 100%");        
+        BG.add(loginDanRegister, "width " +loginSize+ "%, pos 1al 0 n 100%");      
        
         cover.addEvent(new ActionListener() {
             @Override
@@ -121,10 +119,10 @@ public class LoginForm extends javax.swing.JFrame {
     }
     
     private void register() {
-        loading.setVisible(true);
         System.out.println("Click Register");
+        
+        
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

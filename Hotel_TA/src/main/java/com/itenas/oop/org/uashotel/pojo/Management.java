@@ -9,7 +9,7 @@ package com.itenas.oop.org.uashotel.pojo;
  * @author apple
  */
 public class Management {
-    private Integer id;
+    private int id;
     private String nama;
     private boolean loginStatus;
     private Account akun;
@@ -17,11 +17,11 @@ public class Management {
     public Management() {
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 

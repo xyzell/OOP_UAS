@@ -4,6 +4,11 @@
  */
 package com.itenas.oop.org.uashotel.swing.component;
 
+import com.itenas.oop.org.uashotel.pojo.Guest;
+import com.itenas.oop.org.uashotel.service.impl.GuestServiceImpl;
+import com.itenas.oop.org.uashotel.service.impl.GuestServiceLoginImpl;
+import com.itenas.oop.org.uashotel.swing.ErrorString;
+import com.itenas.oop.org.uashotel.swing.LoginForm;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
@@ -17,6 +22,8 @@ import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import javax.swing.Timer;
+import net.miginfocom.layout.AC;
 import net.miginfocom.swing.MigLayout;
 
 /**
@@ -24,6 +31,11 @@ import net.miginfocom.swing.MigLayout;
  * @author apple
  */
 public class PanelLoginDanRegister extends javax.swing.JLayeredPane {
+    GuestServiceLoginImpl guestAcc;
+    GuestServiceImpl guestDetail;
+    Guest guest;
+    Timer timer;
+   
 
     public PanelLoginDanRegister(ActionListener eventRegister) {
         initComponents();
@@ -34,8 +46,8 @@ public class PanelLoginDanRegister extends javax.swing.JLayeredPane {
     }
     
     private void initRegister(ActionListener eventRegister) {
-        register.setLayout(new MigLayout ("wrap", "push[center]push", "110[]25[]10[]10[]30[]push"));
-        JLabel label = new JLabel("Buat Akun");
+        register.setLayout(new MigLayout ("wrap", "push[center]push", "110[]25[]10[]10[]70[]push"));
+        JLabel label = new JLabel("Register");
         label.setFont(new Font("sansserif", 1, 30));
         label.setForeground(new Color(48, 45, 35));
         register.add(label);
@@ -43,29 +55,77 @@ public class PanelLoginDanRegister extends javax.swing.JLayeredPane {
         // Kolom Nama - Password
         MyTextField txtUser = new MyTextField();
         txtUser.setPrefixIcon(new ImageIcon(getClass().getResource("/images/user.png")));
-        txtUser.setHint("Nama");
+        txtUser.setHint("Your Name");
         register.add(txtUser, "w 60%");
+        
         MyTextField txtEmail = new MyTextField();
         txtEmail.setPrefixIcon(new ImageIcon(getClass().getResource("/images/mail.png")));
-        txtEmail.setHint(("Email"));
+        txtEmail.setHint(("Your Email"));
         register.add(txtEmail, "w 60%");
+        
         MyPassField txtPass = new MyPassField();
         txtPass.setPrefixIcon(new ImageIcon(getClass().getResource("/images/pass.png")));
-        txtPass.setHint(("Sandi"));
+        txtPass.setHint(("Password"));
         register.add(txtPass, "w 60%");
+        
+        MyTextField txtNumber = new MyTextField();
+        txtNumber.setPrefixIcon(new ImageIcon(getClass().getResource("/images/telephone.png")));
+        txtNumber.setHint("Phone Number");
+        register.add(txtNumber, "w 40%, pos 100 318 n n");
+        
+        MyTextField txtAge = new MyTextField();
+        txtAge.setPrefixIcon(new ImageIcon(getClass().getResource("/images/age-group.png")));
+        txtAge.setHint("Age");
+        register.add(txtAge, "w 18%, pos 306 318 n n");
         
         // kolom button
         Button cmd = new Button();
         cmd.setBackground(new Color (48, 45, 35));
         cmd.setForeground(new Color (250, 250, 250));
         cmd.addActionListener(eventRegister);
-        cmd.setText("Daftar");
+        cmd.setText("Register");
         register.add(cmd, "w 40%, h 40");
         
         ShowPasswordCheckBox registerPassShow = new ShowPasswordCheckBox();
         register.add(registerPassShow, "pos 405 277 n n");
         showPassword(registerPassShow, txtPass);
         
+        guestAcc = new GuestServiceLoginImpl();
+        guestDetail = new GuestServiceImpl();
+        guest = new Guest();
+        
+        JLabel registerConfirm = new JLabel();
+        register.add(registerConfirm, "pos 193 430 15% 10%");
+        
+        //Register
+        cmd.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                try{
+                    Long.valueOf(txtNumber.getText());
+                    int x = Integer.parseInt(txtAge.getText());
+                    
+                    guestAcc.register(txtUser.getText(), txtEmail.getText(), String.valueOf(txtPass.getPassword()));
+                    guest.setGuest_pnumber(txtNumber.getText());
+                    guest.setGuest_age(x);
+                    guestDetail.create(guest);
+                    
+                    registerConfirm.setText("Register Successful!");
+                    new Timer(4_000, (e) -> {registerConfirm.setText(null);}).start();
+                    
+                } catch (NumberFormatException e) {
+                    if(txtNumber.getText().isEmpty() || txtAge.getText().isEmpty()){
+                        System.out.println("Test");
+                    } else {
+                        ErrorString error = new ErrorString();
+                        error.setVisible(true);
+                        error.setLocationRelativeTo(null);
+                        System.out.println(e);
+                    }
+            
+                }
+            }
+        });
     } 
    
     private void initLogin() {
@@ -78,15 +138,15 @@ public class PanelLoginDanRegister extends javax.swing.JLayeredPane {
         // Kolom Email - Sandi
         MyTextField txtEmail = new MyTextField();
         txtEmail.setPrefixIcon(new ImageIcon(getClass().getResource("/images/mail.png")));
-        txtEmail.setHint(("Email"));
+        txtEmail.setHint(("Your Email"));
         login.add(txtEmail, "w 60%");
         
         MyPassField txtPass = new MyPassField();
         txtPass.setPrefixIcon(new ImageIcon(getClass().getResource("/images/pass.png")));
-        txtPass.setHint(("Sandi"));
+        txtPass.setHint(("Password"));
         login.add(txtPass, "w 60%");
         
-        JButton cmdLupa = new JButton("Lupa Kata Sandi?");
+        JButton cmdLupa = new JButton("Forget Password?");
         cmdLupa.setForeground(new Color(100,100,100));
         cmdLupa.setFont(new Font("sansserif", 1, 12));
         cmdLupa.setContentAreaFilled(false);
