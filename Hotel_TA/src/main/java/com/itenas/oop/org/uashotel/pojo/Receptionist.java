@@ -9,7 +9,7 @@ package com.itenas.oop.org.uashotel.pojo;
  * @author User
  */
 public class Receptionist {
-    private String idReceptionist;
+    private int idReceptionist;
     private String namaReceptionist;
     private String numberReceptionist;
     private boolean loginStatus;
@@ -18,13 +18,14 @@ public class Receptionist {
     public Receptionist() {
     }
 
-    public String getIdReceptionist() {
+    public int getIdReceptionist() {
         return idReceptionist;
     }
 
-    public void setIdReceptionist(String idReceptionist) {
+    public void setIdReceptionist(int idReceptionist) {
         this.idReceptionist = idReceptionist;
     }
+
 
     public String getNamaReceptionist() {
         return namaReceptionist;

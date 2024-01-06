@@ -9,7 +9,7 @@ package com.itenas.oop.org.uashotel.pojo;
  * @author User
  */
 public class Account {
-    private String idAccount;
+    private int idAccount;
     private String email;
     private String username;
     private String password;
@@ -18,13 +18,15 @@ public class Account {
     public Account() {
     }
 
-    public String getIdAccount() {
+    public int getIdAccount() {
         return idAccount;
     }
 
-    public void setIdAccount(String idAccount) {
+    public void setIdAccount(int idAccount) {
         this.idAccount = idAccount;
     }
+
+    
 
     public String getEmail() {
         return email;

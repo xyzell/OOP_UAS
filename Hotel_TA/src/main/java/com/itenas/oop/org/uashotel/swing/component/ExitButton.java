@@ -5,7 +5,6 @@
 package com.itenas.oop.org.uashotel.swing.component;
 
 import com.itenas.oop.org.uashotel.swing.ExitConfirmation;
-import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
