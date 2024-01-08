@@ -40,11 +40,11 @@ public class ReceptionistLoginImpl implements ReceptionistService{
             
             while (rs.next()) {
                 receptionist = new Receptionist();
-                receptionist.setIdReceptionist("ID_Rect");
+                receptionist.setIdReceptionist(rs.getInt("ID_Rect"));
                 receptionist.setNamaReceptionist("rect_name");
                 receptionist.setNumberReceptionist("rect_pnumber");
                 account = new Account();
-                account.setIdAccount("ID_acc");
+                account.setIdAccount(rs.getInt("ID_acc"));
                 account.setEmail(rs.getString("email"));
                 account.setUsername(rs.getString("username"));
                 account.setLevel(rs.getString("level"));
@@ -59,8 +59,10 @@ public class ReceptionistLoginImpl implements ReceptionistService{
     }
 
     @Override
-    public Receptionist register(String username, String email, String password) {
+    public Integer register(String username, String email, String password) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
+    
     
 }

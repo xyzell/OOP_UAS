@@ -38,7 +38,7 @@ public class ExitConfirmation extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        jPanel3.setBackground(new Color(255, 255, 255, 88));
+        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
         jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel3MouseClicked(evt);
@@ -153,14 +153,6 @@ public class ExitConfirmation extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void KeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KeluarActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_KeluarActionPerformed
-
-    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
-        this.setVisible(false);
-    }//GEN-LAST:event_button1ActionPerformed
-
     private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
         this.setVisible(false);
     }//GEN-LAST:event_jPanel3MouseClicked
@@ -168,6 +160,14 @@ public class ExitConfirmation extends javax.swing.JFrame {
     private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
         this.setVisible(true);
     }//GEN-LAST:event_jPanel1MouseClicked
+
+    private void KeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KeluarActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_KeluarActionPerformed
+
+    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_button1ActionPerformed
   
     
     /**
