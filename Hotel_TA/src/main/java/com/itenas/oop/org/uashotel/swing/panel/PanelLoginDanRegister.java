@@ -2,8 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package com.itenas.oop.org.uashotel.swing.component;
+package com.itenas.oop.org.uashotel.swing.panel;
 
+import com.itenas.oop.org.uashotel.swing.component.Button;
+import com.itenas.oop.org.uashotel.swing.component.MyPassField;
+import com.itenas.oop.org.uashotel.swing.component.MyTextField;
+import com.itenas.oop.org.uashotel.swing.component.ShowPasswordCheckBox;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
@@ -132,7 +136,7 @@ public class PanelLoginDanRegister extends javax.swing.JLayeredPane {
         });
     }
         
-        public void showRegister (boolean show) {
+    public void showRegister (boolean show) {
             if (show) {
                 register.setVisible(false);
                 login.setVisible(true);
@@ -141,7 +145,7 @@ public class PanelLoginDanRegister extends javax.swing.JLayeredPane {
                 login.setVisible(false);
             }
             
-        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

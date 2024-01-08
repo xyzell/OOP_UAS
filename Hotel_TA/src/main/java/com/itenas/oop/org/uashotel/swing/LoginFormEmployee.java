@@ -4,21 +4,35 @@
  */
 package com.itenas.oop.org.uashotel.swing;
 
-/**
- *
- * @author acer
- */
-public class LoginFormEmployee extends javax.swing.JFrame {
+import com.itenas.oop.org.uashotel.pojo.Receptionist;
+import com.itenas.oop.org.uashotel.service.ReceptionistService;
+import com.itenas.oop.org.uashotel.service.impl.ReceptionistLoginImpl;
+import javax.swing.JOptionPane;
 
-    /**
-     * Creates new form LoginFormEmployee
-     */
+
+public class LoginFormEmployee extends javax.swing.JFrame {
+    
+    ReceptionistService receptionistService = new ReceptionistLoginImpl();
+    Receptionist receptionist;
+    boolean login = false;
+    
     public LoginFormEmployee() {
         initComponents();
-        txtusername.setBackground(new java.awt.Color(0,0,0,1));
-        txtpassword.setBackground(new java.awt.Color(0,0,0,1));
+        txt_Username.setBackground(new java.awt.Color(0,0,0,1));
+        txt_Password.setBackground(new java.awt.Color(0,0,0,1));
+        this.setLocationRelativeTo(null);
     }
-
+    
+    public void showPassword(){
+        if(cbShowPass.isSelected()){
+            txt_Password.setEchoChar((char)0);
+            cbShowPass.setText("Hide Password");
+        } else {
+            txt_Password.setEchoChar('*');
+            cbShowPass.setText("Show Password");
+        }
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -31,25 +45,25 @@ public class LoginFormEmployee extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        txtpassword = new javax.swing.JPasswordField();
+        txt_Password = new javax.swing.JPasswordField();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jButton1 = new javax.swing.JButton();
-        txtusername = new javax.swing.JTextField();
+        cbShowPass = new javax.swing.JCheckBox();
+        btnLogin = new javax.swing.JButton();
+        txt_Username = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
         disable = new javax.swing.JLabel();
         show = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(199, 226, 255));
@@ -68,12 +82,8 @@ public class LoginFormEmployee extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 85, -1, -1));
 
-        jLabel5.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("LOGIN EMPLOYEE");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 219, 221, -1));
+        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Documents\\LATIHAN JAVA\\PROJECT UAS\\Image\\database.png")); // NOI18N
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 380));
 
@@ -91,7 +101,7 @@ public class LoginFormEmployee extends javax.swing.JFrame {
                 jLabel2MouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 30, 20));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 40, 19));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 32)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -102,75 +112,80 @@ public class LoginFormEmployee extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Hello! my lovely employees~");
+        jLabel4.setText("Hello! Let's get Started");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 344, -1));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Username");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 219, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 219, -1));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Password");
         jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 219, -1));
 
-        txtpassword.setBackground(new java.awt.Color(255, 255, 255));
-        txtpassword.setFont(txtpassword.getFont().deriveFont(txtpassword.getFont().getSize()+2f));
-        txtpassword.setForeground(new java.awt.Color(255, 255, 255));
-        txtpassword.setBorder(null);
-        txtpassword.addActionListener(new java.awt.event.ActionListener() {
+        txt_Password.setBackground(new java.awt.Color(255, 255, 255));
+        txt_Password.setFont(txt_Password.getFont().deriveFont(txt_Password.getFont().getSize()+2f));
+        txt_Password.setForeground(new java.awt.Color(255, 255, 255));
+        txt_Password.setBorder(null);
+        txt_Password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtpasswordActionPerformed(evt);
+                txt_PasswordActionPerformed(evt);
             }
         });
-        jPanel2.add(txtpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 260, 30));
+        jPanel2.add(txt_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 300, 30));
 
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("______________________________________");
+        jLabel11.setText("_____________________________________");
         jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 272, 37));
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 34, 31));
 
-        jCheckBox1.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        jCheckBox1.setForeground(new java.awt.Color(255, 255, 255));
-        jCheckBox1.setText("Remember Password");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        cbShowPass.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        cbShowPass.setForeground(new java.awt.Color(255, 255, 255));
+        cbShowPass.setText("Show Password");
+        cbShowPass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                cbShowPassActionPerformed(evt);
             }
         });
-        jPanel2.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
+        jPanel2.add(cbShowPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(173, 151, 79));
-        jButton1.setText("LOGIN");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        btnLogin.setBackground(new java.awt.Color(0, 153, 0));
+        btnLogin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnLogin.setForeground(new java.awt.Color(255, 255, 255));
+        btnLogin.setText("LOGIN");
+        btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLogin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnLoginMouseClicked(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 301, 36));
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 301, 36));
 
-        txtusername.setBackground(new java.awt.Color(255, 255, 255));
-        txtusername.setFont(txtusername.getFont().deriveFont(txtusername.getFont().getSize()+2f));
-        txtusername.setForeground(new java.awt.Color(255, 255, 255));
-        txtusername.setBorder(null);
-        txtusername.addActionListener(new java.awt.event.ActionListener() {
+        txt_Username.setBackground(new java.awt.Color(255, 255, 255));
+        txt_Username.setFont(txt_Username.getFont().deriveFont(txt_Username.getFont().getSize()+2f));
+        txt_Username.setForeground(new java.awt.Color(255, 255, 255));
+        txt_Username.setBorder(null);
+        txt_Username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtusernameActionPerformed(evt);
+                txt_UsernameActionPerformed(evt);
             }
         });
-        jPanel2.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 260, 30));
+        jPanel2.add(txt_Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 300, 30));
 
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("______________________________________");
+        jLabel13.setText("_____________________________________");
         jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 266, 37));
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel7.setText("Forget Password?");
@@ -180,15 +195,8 @@ public class LoginFormEmployee extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel14.setText("Don't have an account?");
-        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 183, -1));
-
-        jLabel15.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setText("Sign Up");
-        jLabel15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 340, 129, -1));
+        jLabel14.setText("Sign Up");
+        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 60, -1));
 
         disable.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         disable.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -208,34 +216,58 @@ public class LoginFormEmployee extends javax.swing.JFrame {
         });
         jPanel2.add(show, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, 34, 31));
 
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel15.setText("Don't have an account?");
+        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 183, -1));
+
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 0, 350, 380));
 
-        setSize(new java.awt.Dimension(718, 377));
+        setSize(new java.awt.Dimension(718, 380));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         System.exit(0);
     }//GEN-LAST:event_jLabel2MouseClicked
+    
+    private void btnLoginMouseClicked(java.awt.event.MouseEvent evt){
+        
+    } 
+ 
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        String username, password;
+        username = txt_Username.getText();
+        password = String.valueOf(txt_Password.getPassword());
+        
+        receptionist = receptionistService.login(username, password);
+        
+        if(receptionist != null){
+            login = true;
+            receptionist.setLoginStatus(true);
+            JOptionPane.showMessageDialog(null, "Berhasil Login!");
+            this.dispose();
+        }else{
+            JOptionPane.showMessageDialog(null, "Username and password salah");
+        }
+        
+    }//GEN-LAST:event_btnLoginActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void txt_UsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_UsernameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_txt_UsernameActionPerformed
 
-    private void txtusernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtusernameActionPerformed
+    private void txt_PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_PasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtusernameActionPerformed
+    }//GEN-LAST:event_txt_PasswordActionPerformed
 
-    private void txtpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtpasswordActionPerformed
-
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    private void cbShowPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbShowPassActionPerformed
+        showPassword();;
+    }//GEN-LAST:event_cbShowPassActionPerformed
 
     private void disableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_disableMouseClicked
-        txtpassword.setEchoChar((char)0);
+        txt_Password.setEchoChar((char)0);
         disable.setVisible(false);
         disable.setEnabled(false);
         show.setEnabled(true);
@@ -243,7 +275,7 @@ public class LoginFormEmployee extends javax.swing.JFrame {
     }//GEN-LAST:event_disableMouseClicked
 
     private void showMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_showMouseClicked
-        txtpassword.setEchoChar('*');
+        txt_Password.setEchoChar((char)8266);
         disable.setVisible(true);
         disable.setEnabled(true);
         show.setEnabled(false);
@@ -262,6 +294,11 @@ public class LoginFormEmployee extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_formWindowOpened
+
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        //
+    }
 
     /**
      * @param args the command line arguments
@@ -299,9 +336,9 @@ public class LoginFormEmployee extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnLogin;
+    private javax.swing.JCheckBox cbShowPass;
     private javax.swing.JLabel disable;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -312,14 +349,18 @@ public class LoginFormEmployee extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel show;
-    private javax.swing.JPasswordField txtpassword;
-    private javax.swing.JTextField txtusername;
+    private javax.swing.JPasswordField txt_Password;
+    private javax.swing.JTextField txt_Username;
     // End of variables declaration//GEN-END:variables
+
+    void setlocationRelativeTo(Object object) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

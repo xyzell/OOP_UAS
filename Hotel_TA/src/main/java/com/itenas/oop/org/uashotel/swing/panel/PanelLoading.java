@@ -1,5 +1,5 @@
 
-package com.itenas.oop.org.uashotel.swing.component;
+package com.itenas.oop.org.uashotel.swing.panel;
 
 import java.awt.AlphaComposite;
 import java.awt.Color;

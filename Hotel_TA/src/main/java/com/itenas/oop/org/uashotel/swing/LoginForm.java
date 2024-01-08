@@ -1,9 +1,9 @@
 
 package com.itenas.oop.org.uashotel.swing;
 
-import com.itenas.oop.org.uashotel.swing.component.PanelCover;
-import com.itenas.oop.org.uashotel.swing.component.PanelLoading;
-import com.itenas.oop.org.uashotel.swing.component.PanelLoginDanRegister;
+import com.itenas.oop.org.uashotel.swing.panel.PanelCover;
+import com.itenas.oop.org.uashotel.swing.panel.PanelLoading;
+import com.itenas.oop.org.uashotel.swing.panel.PanelLoginDanRegister;
 import com.itenas.oop.org.uashotel.swing.component.ExitButton;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -146,11 +146,11 @@ public class LoginForm extends javax.swing.JFrame {
         BG.setLayout(BGLayout);
         BGLayout.setHorizontalGroup(
             BGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 824, Short.MAX_VALUE)
+            .addGap(0, 812, Short.MAX_VALUE)
         );
         BGLayout.setVerticalGroup(
             BGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 514, Short.MAX_VALUE)
+            .addGap(0, 515, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
