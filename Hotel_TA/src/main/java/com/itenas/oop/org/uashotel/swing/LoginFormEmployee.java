@@ -22,7 +22,17 @@ public class LoginFormEmployee extends javax.swing.JFrame {
         txt_Password.setBackground(new java.awt.Color(0,0,0,1));
         this.setLocationRelativeTo(null);
     }
-
+    
+    public void showPassword(){
+        if(cbShowPass.isSelected()){
+            txt_Password.setEchoChar((char)0);
+            cbShowPass.setText("Hide Password");
+        } else {
+            txt_Password.setEchoChar('*');
+            cbShowPass.setText("Show Password");
+        }
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -35,7 +45,7 @@ public class LoginFormEmployee extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -45,7 +55,7 @@ public class LoginFormEmployee extends javax.swing.JFrame {
         txt_Password = new javax.swing.JPasswordField();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        cbShowPass = new javax.swing.JCheckBox();
         btnLogin = new javax.swing.JButton();
         txt_Username = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
@@ -53,7 +63,7 @@ public class LoginFormEmployee extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         disable = new javax.swing.JLabel();
         show = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(199, 226, 255));
@@ -72,12 +82,8 @@ public class LoginFormEmployee extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 85, -1, -1));
 
-        jLabel5.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("LOGIN EMPLOYEE");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 219, 221, -1));
+        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Documents\\LATIHAN JAVA\\PROJECT UAS\\Image\\database.png")); // NOI18N
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 380));
 
@@ -128,28 +134,28 @@ public class LoginFormEmployee extends javax.swing.JFrame {
                 txt_PasswordActionPerformed(evt);
             }
         });
-        jPanel2.add(txt_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 270, 30));
+        jPanel2.add(txt_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 300, 30));
 
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("______________________________________");
+        jLabel11.setText("_____________________________________");
         jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 272, 37));
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 34, 31));
 
-        jCheckBox1.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        jCheckBox1.setForeground(new java.awt.Color(255, 255, 255));
-        jCheckBox1.setText("Remember Password");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        cbShowPass.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        cbShowPass.setForeground(new java.awt.Color(255, 255, 255));
+        cbShowPass.setText("Show Password");
+        cbShowPass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                cbShowPassActionPerformed(evt);
             }
         });
-        jPanel2.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
+        jPanel2.add(cbShowPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
 
-        btnLogin.setBackground(new java.awt.Color(255, 255, 255));
+        btnLogin.setBackground(new java.awt.Color(0, 153, 0));
         btnLogin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnLogin.setForeground(new java.awt.Color(173, 151, 79));
+        btnLogin.setForeground(new java.awt.Color(255, 255, 255));
         btnLogin.setText("LOGIN");
         btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLogin.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -173,10 +179,10 @@ public class LoginFormEmployee extends javax.swing.JFrame {
                 txt_UsernameActionPerformed(evt);
             }
         });
-        jPanel2.add(txt_Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 270, 30));
+        jPanel2.add(txt_Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 300, 30));
 
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("______________________________________");
+        jLabel13.setText("_____________________________________");
         jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 266, 37));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
@@ -189,8 +195,8 @@ public class LoginFormEmployee extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel14.setText("Don't have an account?");
-        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 183, -1));
+        jLabel14.setText("Sign Up");
+        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 60, -1));
 
         disable.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         disable.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -210,16 +216,11 @@ public class LoginFormEmployee extends javax.swing.JFrame {
         });
         jPanel2.add(show, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, 34, 31));
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(173, 151, 79));
-        jButton2.setText("Sign Up");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, -1, -1));
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel15.setText("Don't have an account?");
+        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 183, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 0, 350, 380));
 
@@ -230,7 +231,11 @@ public class LoginFormEmployee extends javax.swing.JFrame {
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         System.exit(0);
     }//GEN-LAST:event_jLabel2MouseClicked
-
+    
+    private void btnLoginMouseClicked(java.awt.event.MouseEvent evt){
+        
+    } 
+ 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         String username, password;
         username = txt_Username.getText();
@@ -257,9 +262,9 @@ public class LoginFormEmployee extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_PasswordActionPerformed
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    private void cbShowPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbShowPassActionPerformed
+        showPassword();;
+    }//GEN-LAST:event_cbShowPassActionPerformed
 
     private void disableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_disableMouseClicked
         txt_Password.setEchoChar((char)0);
@@ -291,11 +296,8 @@ public class LoginFormEmployee extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        SignUp SignUpFrame = new SignUp();
-        SignUpFrame.setVisible(true);
-        SignUpFrame.setlocationRelativeTo(null);
-        this.dispose();
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        //
     }
 
     /**
@@ -335,20 +337,21 @@ public class LoginFormEmployee extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
+    private javax.swing.JCheckBox cbShowPass;
     private javax.swing.JLabel disable;
-    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
