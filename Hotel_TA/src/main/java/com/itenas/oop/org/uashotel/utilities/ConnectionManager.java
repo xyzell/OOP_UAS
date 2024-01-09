@@ -24,7 +24,7 @@ public class ConnectionManager {
 
     public ConnectionManager() {
         this.username = "root";
-        this.password = "basdat2020";
+        this.password = "basdat2022";
     }
 
     public String getDB_URL() {

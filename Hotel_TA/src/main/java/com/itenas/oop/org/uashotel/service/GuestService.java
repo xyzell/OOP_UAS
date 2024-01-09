@@ -4,13 +4,13 @@
  */
 package com.itenas.oop.org.uashotel.service;
 
-import com.itenas.oop.org.uashotel.pojo.Receptionist;
+import com.itenas.oop.org.uashotel.pojo.Guest;
 import com.itenas.oop.org.uashotel.repository.CrudRepository;
 
 /**
  *
- * @author Nicholas
+ * @author User
  */
-public interface ReceptionistService extends CrudRepository<Receptionist, Integer>{
+public interface GuestService extends CrudRepository<Guest, Integer>{
     
 }

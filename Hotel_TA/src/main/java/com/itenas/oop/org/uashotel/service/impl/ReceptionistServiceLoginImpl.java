@@ -3,7 +3,6 @@ package com.itenas.oop.org.uashotel.service.impl;
 
 import com.itenas.oop.org.uashotel.pojo.Account;
 import com.itenas.oop.org.uashotel.pojo.Receptionist;
-import com.itenas.oop.org.uashotel.service.ReceptionistService;
 import com.itenas.oop.org.uashotel.utilities.ConnectionManager;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -11,9 +10,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import com.itenas.oop.org.uashotel.service.ReceptionistAccountService;
 
 
-public class ReceptionistLoginImpl implements ReceptionistService{
+public class ReceptionistServiceLoginImpl implements ReceptionistAccountService{
+
     private ConnectionManager conMan;
     private Connection conn;
     Statement stmt;
@@ -40,11 +41,12 @@ public class ReceptionistLoginImpl implements ReceptionistService{
             
             while (rs.next()) {
                 receptionist = new Receptionist();
-                receptionist.setIdReceptionist("ID_Rect");
+
+                receptionist.setIdReceptionist(rs.getString("ID_Rect"));
                 receptionist.setNamaReceptionist("rect_name");
                 receptionist.setNumberReceptionist("rect_pnumber");
                 account = new Account();
-                account.setIdAccount("ID_acc");
+                account.setIdAccount(rs.getInt("ID_acc"));
                 account.setEmail(rs.getString("email"));
                 account.setUsername(rs.getString("username"));
                 account.setLevel(rs.getString("level"));
@@ -52,15 +54,32 @@ public class ReceptionistLoginImpl implements ReceptionistService{
             }
             conMan.disconnect();
         } catch (SQLException ex) {
-            Logger.getLogger(ReceptionistLoginImpl.class.getName())
+            Logger.getLogger(ReceptionistServiceLoginImpl.class.getName())
+
                     .log(Level.SEVERE, null, ex);
         }
         return receptionist;
     }
 
     @Override
-    public Receptionist register(String username, String email, String password) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Integer register(String username, String email, String password) {
+        int result = 0;
+        String sql = "INSERT INTO account (email, username, password, level) "
+                + "VALUES ('" + email + "', "
+                + "'"+ username +"', "
+                + "'"+ password +"', "
+                + "'Receptionist')";
+        
+        conMan = new ConnectionManager();
+        conn = conMan.connect();
+        
+        try {
+            stmt = conn.createStatement();
+            stmt.executeUpdate(sql);
+            conMan.disconnect();
+        } catch (SQLException ex) {
+            result = 1;
+        }
+        return result;
     }
-    
 }

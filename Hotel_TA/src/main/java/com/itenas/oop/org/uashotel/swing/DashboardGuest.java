@@ -28,38 +28,6 @@ public class DashboardGuest extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        shadowFiture1 = new com.itenas.oop.org.uashotel.swing.component.ShadowFiture();
-        pictureBox1 = new com.itenas.oop.org.uashotel.swing.component.PictureBox();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        pictureBox4 = new com.itenas.oop.org.uashotel.swing.component.PictureBox();
-        jLabel9 = new javax.swing.JLabel();
-        pictureBox9 = new com.itenas.oop.org.uashotel.swing.component.PictureBox();
-        shadowFiture2 = new com.itenas.oop.org.uashotel.swing.component.ShadowFiture();
-        pictureBox8 = new com.itenas.oop.org.uashotel.swing.component.PictureBox();
-        pictureBox2 = new com.itenas.oop.org.uashotel.swing.component.PictureBox();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        pictureBox6 = new com.itenas.oop.org.uashotel.swing.component.PictureBox();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        shadowFiture3 = new com.itenas.oop.org.uashotel.swing.component.ShadowFiture();
-        pictureBox3 = new com.itenas.oop.org.uashotel.swing.component.PictureBox();
-        jLabel7 = new javax.swing.JLabel();
-        pictureBox11 = new com.itenas.oop.org.uashotel.swing.component.PictureBox();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        pictureBox7 = new com.itenas.oop.org.uashotel.swing.component.PictureBox();
-        jLabel16 = new javax.swing.JLabel();
-        shadowFiture5 = new com.itenas.oop.org.uashotel.swing.component.ShadowFiture();
-        pictureBox5 = new com.itenas.oop.org.uashotel.swing.component.PictureBox();
-        jLabel8 = new javax.swing.JLabel();
-        pictureBox12 = new com.itenas.oop.org.uashotel.swing.component.PictureBox();
-        pictureBox13 = new com.itenas.oop.org.uashotel.swing.component.PictureBox();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -435,17 +403,8 @@ public class DashboardGuest extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(shadowFiture1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(shadowFiture2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(shadowFiture3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(shadowFiture5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(51, 51, 51))
+                .addComponent(jLabel5)
+                .addGap(903, 903, 903))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -460,6 +419,7 @@ public class DashboardGuest extends javax.swing.JFrame {
                     .addComponent(shadowFiture2, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
                     .addComponent(shadowFiture1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(164, Short.MAX_VALUE))
+
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -526,40 +486,8 @@ public class DashboardGuest extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private com.itenas.oop.org.uashotel.swing.component.PictureBox pictureBox1;
-    private com.itenas.oop.org.uashotel.swing.component.PictureBox pictureBox11;
-    private com.itenas.oop.org.uashotel.swing.component.PictureBox pictureBox12;
-    private com.itenas.oop.org.uashotel.swing.component.PictureBox pictureBox13;
-    private com.itenas.oop.org.uashotel.swing.component.PictureBox pictureBox2;
-    private com.itenas.oop.org.uashotel.swing.component.PictureBox pictureBox3;
-    private com.itenas.oop.org.uashotel.swing.component.PictureBox pictureBox4;
-    private com.itenas.oop.org.uashotel.swing.component.PictureBox pictureBox5;
-    private com.itenas.oop.org.uashotel.swing.component.PictureBox pictureBox6;
-    private com.itenas.oop.org.uashotel.swing.component.PictureBox pictureBox7;
-    private com.itenas.oop.org.uashotel.swing.component.PictureBox pictureBox8;
-    private com.itenas.oop.org.uashotel.swing.component.PictureBox pictureBox9;
-    private com.itenas.oop.org.uashotel.swing.component.ShadowFiture shadowFiture1;
-    private com.itenas.oop.org.uashotel.swing.component.ShadowFiture shadowFiture2;
-    private com.itenas.oop.org.uashotel.swing.component.ShadowFiture shadowFiture3;
-    private com.itenas.oop.org.uashotel.swing.component.ShadowFiture shadowFiture5;
     // End of variables declaration//GEN-END:variables
 }
