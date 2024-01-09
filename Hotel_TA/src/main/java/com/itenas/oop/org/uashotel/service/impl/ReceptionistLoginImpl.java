@@ -13,7 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-public class ReceptionistLoginImpl implements ReceptionistService{
+public class  ReceptionistServiceLoginImpl implements ReceptionistAccountService{
     private ConnectionManager conMan;
     private Connection conn;
     Statement stmt;
