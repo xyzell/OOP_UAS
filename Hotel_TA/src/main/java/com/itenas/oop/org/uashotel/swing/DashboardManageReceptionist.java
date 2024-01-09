@@ -453,7 +453,7 @@ public class DashboardManageReceptionist extends javax.swing.JFrame {
                                                 .addGap(18, 18, 18)
                                                 .addComponent(phone, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addComponent(jLabel4))
-                                        .addGap(0, 0, Short.MAX_VALUE))
+                                        .addGap(0, 2, Short.MAX_VALUE))
                                     .addComponent(clear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(58, 58, 58))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -600,7 +600,7 @@ public class DashboardManageReceptionist extends javax.swing.JFrame {
                         confirm.setText("Failed to Add!");
                     }
                     
-                    new Timer(4_000, (e) -> {confirm.setText(null);}).start();
+                    new Timer(6_000, (e) -> {confirm.setText(null);}).start();
                     
                 } catch (NumberFormatException e) {
                     if(phone.getText().isEmpty()){
@@ -633,7 +633,7 @@ public class DashboardManageReceptionist extends javax.swing.JFrame {
             confirm.setText("Failed to Update!");
             JOptionPane.showMessageDialog(null, "Password Salah", "ERROR", JOptionPane.ERROR_MESSAGE);
         }
-        new Timer(4_000, (e) -> {confirm.setText(null);}).start();
+        new Timer(6_000, (e) -> {confirm.setText(null);}).start();
         
     }//GEN-LAST:event_editActionPerformed
 
@@ -659,7 +659,7 @@ public class DashboardManageReceptionist extends javax.swing.JFrame {
         loadData();
         emptyField();
         confirm.setText("Deleted Successfully!");
-        new Timer(4_000, (e) -> {confirm.setText(null);}).start();
+        new Timer(6_000, (e) -> {confirm.setText(null);}).start();
         
     }//GEN-LAST:event_deleteActionPerformed
 
