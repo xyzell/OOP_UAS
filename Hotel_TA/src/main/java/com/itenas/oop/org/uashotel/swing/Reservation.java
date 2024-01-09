@@ -91,8 +91,7 @@ public class Reservation extends javax.swing.JFrame {
     {
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel", "root", "basdat2020");
         st = con.createStatement();
-        rs = st.executeQuery("SELECT account.username, hotel_room.ID_room, hotel_room.room_type, room_reserve.chck_in, room_reserve.total_payment FROM account INNER JOIN"
-                + " guests ON account.ID_acc = guests.ID_acc INNER JOIN room_reserve ON guests.ID_guest = room_reserve.ID_guest INNER JOIN hotel_room ON room_reserve.ID_Room = hotel_room.ID_room");
+        rs = st.executeQuery("SELECT * from reservation");
 
         // Mendapatkan metadata dari ResultSet
         java.sql.ResultSetMetaData metaData = rs.getMetaData();
@@ -266,17 +265,17 @@ public class Reservation extends javax.swing.JFrame {
 
         TabelGuest.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Guest", "ID Room", "Room Type", "Check In", "Total Payment"
+                "ID Reservation", "Room Type", "Total Guest", "Check In", "Duration", "Cost", "Payment"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
+                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -296,8 +295,8 @@ public class Reservation extends javax.swing.JFrame {
 
         txtDays.setBackground(new java.awt.Color(255, 255, 255));
         txtDays.setForeground(new java.awt.Color(51, 51, 51));
-        txtDays.setText("     Days");
-        txtDays.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(173, 151, 79)));
+        txtDays.setText("      Days");
+        txtDays.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(173, 151, 79)));
         txtDays.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDaysActionPerformed(evt);
@@ -336,9 +335,7 @@ public class Reservation extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(67, 67, 67)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel9)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel9)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jLabel7)
                                 .addComponent(jLabel6)
@@ -359,7 +356,7 @@ public class Reservation extends javax.swing.JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addComponent(txtDays, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(txtGuestID, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 656, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(215, 215, 215))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -416,7 +413,7 @@ public class Reservation extends javax.swing.JFrame {
                         .addComponent(txtTotalPayment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 140, Short.MAX_VALUE))
+                .addGap(0, 139, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1400, 730));

@@ -128,13 +128,17 @@ public class ManageGuestReceptionist extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblLogOut)
-                    .addComponent(lblLogOut1)
-                    .addComponent(lblLogOut2)
-                    .addComponent(lblLogOut3)
-                    .addComponent(lblLogOut4))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblLogOut1)
+                            .addComponent(lblLogOut2)
+                            .addComponent(lblLogOut3)
+                            .addComponent(lblLogOut4)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblLogOut)))
                 .addContainerGap(76, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -150,7 +154,7 @@ public class ManageGuestReceptionist extends javax.swing.JFrame {
                 .addComponent(lblLogOut4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblLogOut)
-                .addGap(96, 96, 96))
+                .addGap(82, 82, 82))
         );
 
         jPanel3.setBackground(new java.awt.Color(190, 160, 90));
