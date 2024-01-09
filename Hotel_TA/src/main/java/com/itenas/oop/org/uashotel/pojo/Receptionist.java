@@ -9,23 +9,21 @@ package com.itenas.oop.org.uashotel.pojo;
  * @author User
  */
 public class Receptionist {
-    private int idReceptionist;
+    private String idReceptionist;
     private String namaReceptionist;
     private String numberReceptionist;
-    private boolean loginStatus;
     private Account account;
 
     public Receptionist() {
     }
 
-    public int getIdReceptionist() {
+    public String getIdReceptionist() {
         return idReceptionist;
     }
 
-    public void setIdReceptionist(int idReceptionist) {
+    public void setIdReceptionist(String idReceptionist) {
         this.idReceptionist = idReceptionist;
     }
-
 
     public String getNamaReceptionist() {
         return namaReceptionist;
@@ -50,14 +48,5 @@ public class Receptionist {
     public void setAccount(Account account) {
         this.account = account;
     }
-    
-    public boolean isLoginStatus() {
-        return loginStatus;
-    }
-
-    public void setLoginStatus(boolean loginStatus) {
-        this.loginStatus = loginStatus;
-    }
-    
     
 }

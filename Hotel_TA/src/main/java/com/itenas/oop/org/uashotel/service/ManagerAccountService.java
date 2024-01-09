@@ -4,13 +4,13 @@
  */
 package com.itenas.oop.org.uashotel.service;
 
-import com.itenas.oop.org.uashotel.pojo.Receptionist;
-import com.itenas.oop.org.uashotel.repository.CrudRepository;
+import com.itenas.oop.org.uashotel.pojo.Management;
+import com.itenas.oop.org.uashotel.repository.AkunRepository;
 
 /**
  *
  * @author Nicholas
  */
-public interface ReceptionistService extends CrudRepository<Receptionist, Integer>{
+public interface ManagerAccountService extends AkunRepository<Management, Integer>{
     
 }

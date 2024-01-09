@@ -9,21 +9,23 @@ package com.itenas.oop.org.uashotel.pojo;
  * @author apple
  */
 public class Management {
-    private String id;
+    private int id;
     private String nama;
-    private boolean loginStatus;
+    private String phoneNumber;
     private Account akun;
 
     public Management() {
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
+
+    
 
     public String getNama() {
         return nama;
@@ -33,14 +35,6 @@ public class Management {
         this.nama = nama;
     }
 
-    public boolean isLoginStatus() {
-        return loginStatus;
-    }
-
-    public void setLoginStatus(boolean loginStatus) {
-        this.loginStatus = loginStatus;
-    }
-
     public Account getAkun() {
         return akun;
     }
@@ -48,6 +42,15 @@ public class Management {
     public void setAkun(Account akun) {
         this.akun = akun;
     }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+    
     
     
 }
