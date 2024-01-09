@@ -14,6 +14,7 @@ import com.itenas.oop.org.uashotel.service.ReceptionistAccountService;
 
 
 public class ReceptionistServiceLoginImpl implements ReceptionistAccountService{
+
     private ConnectionManager conMan;
     private Connection conn;
     Statement stmt;
@@ -40,6 +41,7 @@ public class ReceptionistServiceLoginImpl implements ReceptionistAccountService{
             
             while (rs.next()) {
                 receptionist = new Receptionist();
+
                 receptionist.setIdReceptionist(rs.getString("ID_Rect"));
                 receptionist.setNamaReceptionist("rect_name");
                 receptionist.setNumberReceptionist("rect_pnumber");
@@ -53,6 +55,7 @@ public class ReceptionistServiceLoginImpl implements ReceptionistAccountService{
             conMan.disconnect();
         } catch (SQLException ex) {
             Logger.getLogger(ReceptionistServiceLoginImpl.class.getName())
+
                     .log(Level.SEVERE, null, ex);
         }
         return receptionist;
@@ -79,7 +82,4 @@ public class ReceptionistServiceLoginImpl implements ReceptionistAccountService{
         }
         return result;
     }
-
-    
-    
 }

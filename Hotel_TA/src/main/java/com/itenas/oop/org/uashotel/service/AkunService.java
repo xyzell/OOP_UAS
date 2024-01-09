@@ -7,6 +7,6 @@ package com.itenas.oop.org.uashotel.service;
 import com.itenas.oop.org.uashotel.pojo.Guest;
 import com.itenas.oop.org.uashotel.repository.AkunRepository;
 
-public interface GuestAccountService extends AkunRepository <Guest, Integer> {
+public interface AkunService extends AkunRepository <Guest, Integer> {
     
 }

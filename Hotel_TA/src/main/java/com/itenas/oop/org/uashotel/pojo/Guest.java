@@ -6,7 +6,9 @@ package com.itenas.oop.org.uashotel.pojo;
  * @author Nicholas
  */
 public class Guest {
-    private int ID_Guest;
+    private String ID_Guest;
+    private String guest_name;
+    private String guest_gender;
     private String guest_pnumber;
     private int guest_age;
     private boolean loginStatus;
@@ -15,12 +17,28 @@ public class Guest {
     public Guest() {
     }
 
-    public int getID_Guest() {
+    public String getID_Guest() {
         return ID_Guest;
     }
 
-    public void setID_Guest(int ID_Guest) {
+    public void setID_Guest(String ID_Guest) {
         this.ID_Guest = ID_Guest;
+    }
+
+    public String getGuest_name() {
+        return guest_name;
+    }
+
+    public void setGuest_name(String guest_name) {
+        this.guest_name = guest_name;
+    }
+
+    public String getGuest_gender() {
+        return guest_gender;
+    }
+
+    public void setGuest_gender(String guest_gender) {
+        this.guest_gender = guest_gender;
     }
 
     public String getGuest_pnumber() {
