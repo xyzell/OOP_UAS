@@ -12,7 +12,6 @@ public class Receptionist {
     private String idReceptionist;
     private String namaReceptionist;
     private String numberReceptionist;
-    private boolean loginStatus;
     private Account account;
 
     public Receptionist() {
@@ -49,14 +48,5 @@ public class Receptionist {
     public void setAccount(Account account) {
         this.account = account;
     }
-    
-    public boolean isLoginStatus() {
-        return loginStatus;
-    }
-
-    public void setLoginStatus(boolean loginStatus) {
-        this.loginStatus = loginStatus;
-    }
-    
     
 }

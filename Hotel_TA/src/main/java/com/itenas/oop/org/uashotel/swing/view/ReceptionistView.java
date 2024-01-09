@@ -5,9 +5,9 @@
 package com.itenas.oop.org.uashotel.swing.view;
 
 import com.itenas.oop.org.uashotel.pojo.Receptionist;
-import com.itenas.oop.org.uashotel.service.ReceptionistService;
-import com.itenas.oop.org.uashotel.service.impl.ReceptionistLoginImpl;
+import com.itenas.oop.org.uashotel.service.impl.ReceptionistServiceLoginImpl;
 import java.util.Scanner;
+import com.itenas.oop.org.uashotel.service.ReceptionistAccountService;
 
 /**
  *
@@ -18,7 +18,7 @@ public class ReceptionistView {
     public static void main(String[] args) {
         
         Scanner s = new Scanner(System.in);
-        ReceptionistService adminService = new ReceptionistLoginImpl();
+        ReceptionistAccountService adminService = new ReceptionistServiceLoginImpl();
         Receptionist receptionist;
         String username, password;
         boolean login = false;
@@ -36,7 +36,6 @@ public class ReceptionistView {
             receptionist = adminService.login(username, password);
             if (receptionist != null) {
                 login = true;
-                receptionist.setLoginStatus(true);
                 System.out.println("Login berhasil...!");
                 System.out.println("");
             } else {

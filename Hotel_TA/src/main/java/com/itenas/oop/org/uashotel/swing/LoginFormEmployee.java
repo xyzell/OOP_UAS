@@ -5,14 +5,14 @@
 package com.itenas.oop.org.uashotel.swing;
 
 import com.itenas.oop.org.uashotel.pojo.Receptionist;
-import com.itenas.oop.org.uashotel.service.ReceptionistService;
-import com.itenas.oop.org.uashotel.service.impl.ReceptionistLoginImpl;
+import com.itenas.oop.org.uashotel.service.impl.ReceptionistServiceLoginImpl;
 import javax.swing.JOptionPane;
+import com.itenas.oop.org.uashotel.service.ReceptionistAccountService;
 
 
 public class LoginFormEmployee extends javax.swing.JFrame {
     
-    ReceptionistService receptionistService = new ReceptionistLoginImpl();
+    ReceptionistAccountService receptionistService = new ReceptionistServiceLoginImpl();
     Receptionist receptionist;
     boolean login = false;
     
@@ -245,9 +245,10 @@ public class LoginFormEmployee extends javax.swing.JFrame {
         
         if(receptionist != null){
             login = true;
-            receptionist.setLoginStatus(true);
             JOptionPane.showMessageDialog(null, "Berhasil Login!");
             this.dispose();
+            DashboardManager dashboardManager = new DashboardManager();
+            dashboardManager.setVisible(true);
         }else{
             JOptionPane.showMessageDialog(null, "Username and password salah");
         }

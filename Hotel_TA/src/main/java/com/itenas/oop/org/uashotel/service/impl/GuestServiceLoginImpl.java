@@ -53,7 +53,7 @@ public class GuestServiceLoginImpl implements AkunService {
             }
             conMan.disconnect();
         } catch (SQLException ex) {
-            Logger.getLogger(ReceptionistLoginImpl.class.getName())
+            Logger.getLogger(ReceptionistServiceLoginImpl.class.getName())
                     .log(Level.SEVERE, null, ex);
         }
         return guest;
