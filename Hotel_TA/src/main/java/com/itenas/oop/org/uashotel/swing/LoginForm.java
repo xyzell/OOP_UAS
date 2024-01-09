@@ -1,4 +1,3 @@
-
 package com.itenas.oop.org.uashotel.swing;
 
 import com.itenas.oop.org.uashotel.swing.panel.PanelCover;

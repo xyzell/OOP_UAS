@@ -138,13 +138,13 @@ public class ManageRoomReceptionist extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblDashboard1)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(lblGuest)
-                        .addComponent(lblLogOut2)
-                        .addComponent(lblReservation)
-                        .addComponent(lblLogOut, javax.swing.GroupLayout.Alignment.TRAILING)))
-                .addContainerGap(45, Short.MAX_VALUE))
+                    .addComponent(lblGuest)
+                    .addComponent(lblLogOut2)
+                    .addComponent(lblReservation)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(lblLogOut)
+                        .addComponent(lblDashboard1)))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -157,9 +157,9 @@ public class ManageRoomReceptionist extends javax.swing.JFrame {
                 .addComponent(lblReservation)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblDashboard1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 356, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 370, Short.MAX_VALUE)
                 .addComponent(lblLogOut)
-                .addGap(91, 91, 91))
+                .addGap(92, 92, 92))
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, 730));
