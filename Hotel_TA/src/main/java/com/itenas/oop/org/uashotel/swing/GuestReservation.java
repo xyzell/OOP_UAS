@@ -13,7 +13,7 @@ import javax.swing.table.DefaultTableModel;
 public class GuestReservation extends javax.swing.JFrame {
 
    private DefaultTableModel model;
-   
+    
     public GuestReservation() {
         initComponents();
         setLocationRelativeTo(null);
@@ -50,7 +50,6 @@ public class GuestReservation extends javax.swing.JFrame {
         pictureBox1 = new com.itenas.oop.org.uashotel.swing.component.PictureBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1133, 647));
 
         jPanel1.setBackground(new java.awt.Color(216, 197, 135));
         jPanel1.setMaximumSize(new java.awt.Dimension(1366, 1080));
@@ -281,6 +280,10 @@ public class GuestReservation extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+
+    }//GEN-LAST:event_button1ActionPerformed
+
     private void txTotalBiayaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txTotalBiayaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txTotalBiayaActionPerformed
@@ -297,9 +300,7 @@ public class GuestReservation extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cbTotalCustomerActionPerformed
 
-    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button1ActionPerformed
+ 
 
     /**
      * @param args the command line arguments
