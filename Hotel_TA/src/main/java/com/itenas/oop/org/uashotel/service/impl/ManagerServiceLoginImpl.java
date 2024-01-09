@@ -6,7 +6,7 @@ package com.itenas.oop.org.uashotel.service.impl;
 
 import com.itenas.oop.org.uashotel.pojo.Account;
 import com.itenas.oop.org.uashotel.pojo.Management;
-import com.itenas.oop.org.uashotel.pojo.Receptionist;
+
 import com.itenas.oop.org.uashotel.service.ManagerAccountService;
 import com.itenas.oop.org.uashotel.utilities.ConnectionManager;
 import java.sql.Connection;

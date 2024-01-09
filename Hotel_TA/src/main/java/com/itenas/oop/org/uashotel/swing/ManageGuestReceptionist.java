@@ -166,8 +166,8 @@ public class ManageGuestReceptionist extends javax.swing.JFrame {
             .addGap(0, 14, Short.MAX_VALUE)
         );
 
-        txtGuestName.setBackground(new java.awt.Color(204, 204, 204));
-        txtGuestName.setBorder(null);
+        txtGuestName.setBackground(new java.awt.Color(255, 255, 255));
+        txtGuestName.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(173, 151, 79)));
         txtGuestName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtGuestNameActionPerformed(evt);
@@ -178,7 +178,8 @@ public class ManageGuestReceptionist extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(173, 151, 79));
         jLabel2.setText("ID Guest");
 
-        txtSearch.setBackground(new java.awt.Color(204, 204, 204));
+        txtSearch.setBackground(new java.awt.Color(255, 255, 255));
+        txtSearch.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(173, 151, 79)));
         txtSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSearchActionPerformed(evt);
@@ -197,8 +198,8 @@ public class ManageGuestReceptionist extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(173, 151, 79));
         jLabel5.setText("Guest Age");
 
-        txtGuestPhoneNumber.setBackground(new java.awt.Color(204, 204, 204));
-        txtGuestPhoneNumber.setBorder(null);
+        txtGuestPhoneNumber.setBackground(new java.awt.Color(255, 255, 255));
+        txtGuestPhoneNumber.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(173, 151, 79)));
         txtGuestPhoneNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtGuestPhoneNumberActionPerformed(evt);
@@ -246,8 +247,8 @@ public class ManageGuestReceptionist extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(173, 151, 79));
         jLabel10.setText("Manage Guest");
 
-        txtGuestId.setBackground(new java.awt.Color(204, 204, 204));
-        txtGuestId.setBorder(null);
+        txtGuestId.setBackground(new java.awt.Color(255, 255, 255));
+        txtGuestId.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(173, 151, 79)));
         txtGuestId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtGuestIdActionPerformed(evt);
@@ -263,8 +264,8 @@ public class ManageGuestReceptionist extends javax.swing.JFrame {
             }
         });
 
-        txtGuestAge.setBackground(new java.awt.Color(204, 204, 204));
-        txtGuestAge.setBorder(null);
+        txtGuestAge.setBackground(new java.awt.Color(255, 255, 255));
+        txtGuestAge.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(173, 151, 79)));
         txtGuestAge.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtGuestAgeActionPerformed(evt);

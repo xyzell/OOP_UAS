@@ -33,7 +33,6 @@ public class ManageRoomReceptionist extends javax.swing.JFrame {
     
     public ManageRoomReceptionist() {
         initComponents();
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
         txtIdRoom.setBackground(new java.awt.Color(0,0,0,1));
         txtBadTotal.setBackground(new java.awt.Color(0,0,0,1));
         txtRoomPrice.setBackground(new java.awt.Color(0,0,0,1));
@@ -73,9 +72,6 @@ public class ManageRoomReceptionist extends javax.swing.JFrame {
         btnSearch = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
         btnEdit = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -85,7 +81,7 @@ public class ManageRoomReceptionist extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(173, 151, 79));
 
-        lblGuest.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        lblGuest.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblGuest.setForeground(new java.awt.Color(255, 255, 255));
         lblGuest.setText("Guest");
         lblGuest.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -95,7 +91,7 @@ public class ManageRoomReceptionist extends javax.swing.JFrame {
             }
         });
 
-        lblLogOut2.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        lblLogOut2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblLogOut2.setForeground(new java.awt.Color(255, 255, 255));
         lblLogOut2.setText("Rooms");
         lblLogOut2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -105,7 +101,7 @@ public class ManageRoomReceptionist extends javax.swing.JFrame {
             }
         });
 
-        lblReservation.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        lblReservation.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblReservation.setForeground(new java.awt.Color(255, 255, 255));
         lblReservation.setText("Reservation");
         lblReservation.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -125,7 +121,7 @@ public class ManageRoomReceptionist extends javax.swing.JFrame {
             }
         });
 
-        lblDashboard1.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        lblDashboard1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblDashboard1.setForeground(new java.awt.Color(255, 255, 255));
         lblDashboard1.setText("Dashboard");
         lblDashboard1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -183,8 +179,8 @@ public class ManageRoomReceptionist extends javax.swing.JFrame {
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 0, 1216, -1));
 
-        txtRoomPrice.setBackground(new java.awt.Color(204, 204, 204));
-        txtRoomPrice.setBorder(null);
+        txtRoomPrice.setBackground(new java.awt.Color(255, 255, 255));
+        txtRoomPrice.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(173, 151, 79)));
         txtRoomPrice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtRoomPriceActionPerformed(evt);
@@ -197,8 +193,8 @@ public class ManageRoomReceptionist extends javax.swing.JFrame {
         jLabel2.setText("ID Room");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, -1, -1));
 
-        lblSearch.setBackground(new java.awt.Color(204, 204, 204));
-        lblSearch.setBorder(null);
+        lblSearch.setBackground(new java.awt.Color(255, 255, 255));
+        lblSearch.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(173, 151, 79)));
         lblSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lblSearchActionPerformed(evt);
@@ -209,20 +205,20 @@ public class ManageRoomReceptionist extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(173, 151, 79));
         jLabel3.setText("Room Type");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(173, 151, 79));
         jLabel4.setText("Bed Total");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 320, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(173, 151, 79));
         jLabel5.setText("Status");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 380, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, -1, -1));
 
-        txtBadTotal.setBackground(new java.awt.Color(204, 204, 204));
-        txtBadTotal.setBorder(null);
+        txtBadTotal.setBackground(new java.awt.Color(255, 255, 255));
+        txtBadTotal.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(173, 151, 79)));
         txtBadTotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtBadTotalActionPerformed(evt);
@@ -243,7 +239,7 @@ public class ManageRoomReceptionist extends javax.swing.JFrame {
                 cmbRoomTypeActionPerformed(evt);
             }
         });
-        jPanel1.add(cmbRoomType, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 300, 34));
+        jPanel1.add(cmbRoomType, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 300, 34));
 
         tabelRoom.setBackground(new java.awt.Color(204, 204, 255));
         tabelRoom.setModel(new javax.swing.table.DefaultTableModel(
@@ -294,15 +290,15 @@ public class ManageRoomReceptionist extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(173, 151, 79));
         jLabel9.setText("Room Price");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, -1, -1));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(173, 151, 79));
         jLabel10.setText("Manage Room");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(711, 47, -1, -1));
 
-        txtIdRoom.setBackground(new java.awt.Color(204, 204, 204));
-        txtIdRoom.setBorder(null);
+        txtIdRoom.setBackground(new java.awt.Color(255, 255, 255));
+        txtIdRoom.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(173, 151, 79)));
         txtIdRoom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtIdRoomActionPerformed(evt);
@@ -341,18 +337,6 @@ public class ManageRoomReceptionist extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 520, 300, 35));
-
-        jLabel1.setForeground(new java.awt.Color(173, 151, 79));
-        jLabel1.setText("________________________________________________________");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 350, 300, -1));
-
-        jLabel6.setForeground(new java.awt.Color(173, 151, 79));
-        jLabel6.setText("___________________________________________________");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 300, -1));
-
-        jLabel7.setForeground(new java.awt.Color(173, 151, 79));
-        jLabel7.setText("________________________________________________________");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 300, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -658,14 +642,11 @@ public class ManageRoomReceptionist extends javax.swing.JFrame {
     private javax.swing.JButton btnSearch;
     private javax.swing.JComboBox<String> cmbRoomType;
     private javax.swing.JComboBox<String> cmbStatus;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;

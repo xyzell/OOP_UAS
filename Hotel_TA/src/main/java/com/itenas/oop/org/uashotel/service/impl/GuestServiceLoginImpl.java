@@ -23,7 +23,7 @@ public class GuestServiceLoginImpl implements AkunService {
     public Guest login(String username, String password) {
         Guest guest = null;
         Account account = null;
-            String sql = "SELECT gs.ID_Guest, gs.guest_name, gs.guest_gender, gs.guest_pnumber, gs.guest_age "
+            String sql = "SELECT gs.ID_Guest, gs.guest_pnumber, gs.guest_age "
                     + "ak.ID_acc, ak.email, ak.username, ak.level "
                     + "FROM guests gs, account ak "
                     + "WHERE ad.ID_acc = ak.ID_acc "
@@ -39,13 +39,11 @@ public class GuestServiceLoginImpl implements AkunService {
             
             while (rs.next()) {
                 guest = new Guest();
-                guest.setID_Guest("ID_Guest");
-                guest.setGuest_name("guest_name");
-                guest.setGuest_gender("guest_gender");
-                guest.setGuest_pnumber("guest_pnumber");
+                guest.setID_Guest(rs.getInt("ID_Guest"));
+                guest.setGuest_pnumber(rs.getString("guest_pnumber"));
                 guest.setGuest_age(rs.getInt("guest_age"));
                 account = new Account();
-                account.setIdAccount("ID_acc");
+                account.setIdAccount(rs.getInt("ID_acc"));
                 account.setEmail(rs.getString("email"));
                 account.setUsername(rs.getString("username"));
                 account.setLevel(rs.getString("level"));
@@ -57,11 +55,31 @@ public class GuestServiceLoginImpl implements AkunService {
                     .log(Level.SEVERE, null, ex);
         }
         return guest;
+
     }
 
     @Override
-    public Guest register(String username, String email, String password) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Integer register(String username, String email, String password) {
+        int result = 0;
+        String sql = "INSERT INTO account (email, username, password, level) "
+                + "VALUES ('" + email + "', "
+                + "'"+ username +"', "
+                + "'"+ password +"', "
+                + "'guest')";
+        
+        conMan = new ConnectionManager();
+        conn = conMan.connect();
+        
+        try {
+            stmt = conn.createStatement();
+            stmt.executeUpdate(sql);
+            conMan.disconnect();
+        } catch (SQLException ex) {
+            result = 1;
+        }
+        return result;
     }
+
+    }
+
     
-}
